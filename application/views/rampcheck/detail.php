@@ -105,6 +105,12 @@
                                             <td>Status</td>
                                             <td><?= convertStatusRampcheck($data->status) ?></td>
                                         </tr>
+                                        <?php if($data->status){?>
+                                        <tr>
+                                            <td>Cetak</td>
+                                            <td><a href="#" class="btn btn-sm btn-outline-primary">Surat Peringatan <i class="fa fa-print"></i></a></td>
+                                        </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
