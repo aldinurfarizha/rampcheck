@@ -85,10 +85,12 @@
     $no = 1;
     $array = get_object_vars($rampcheck);
     foreach ($array as $key => $value) {
-        if ($value == 2 || $value == 3 && $key != 'id_sopir') {
-            $result = ubahFormat("$no. $key<br>");
-            echo '<p style="margin : 0; padding-top:0;">' . $result . '</p>';
-            $no++;
+        if ($value == 2 || $value == 3) {
+            if ($key != 'id_sopir' && $key != 'status') {
+                $result = ubahFormat("$no. $key<br>");
+                echo '<p style="margin : 0; padding-top:0;">' . $result . '</p>';
+                $no++;
+            }
         }
     }
     ?>
@@ -98,7 +100,10 @@
     <p align="right">Kuningan, <?= date('Y-m-d') ?></p>
     <table width="100%">
         <tr>
-            <td>Menyetujui untuk kembali ke Pool / Garasi</td>
+            <td>
+                <center>Menyetujui untuk kembali ke Pool / Garasi</center>
+            </td>
+            <td></td>
         </tr>
         <tr>
             <td>
