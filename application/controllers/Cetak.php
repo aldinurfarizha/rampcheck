@@ -89,4 +89,9 @@ class Cetak extends CI_Controller
 		}
 		$this->load->view('cetak/printout_bus', $data);
 	}
+	public function printout_suratperingatan($id_rampcheck)
+	{
+		$data['rampcheck'] = $this->Global_model->getRampcheck(['rampcheck.id_rampcheck' => $id_rampcheck])->row();
+		$this->load->view('cetak/printout_surat_peringatan', $data);
+	}
 }
