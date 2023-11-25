@@ -48,7 +48,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Dinas Perhubungan Kuningan</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Terminal Tipe A Kuningan</h1>
                                         <img width="75px" style="margin-bottom: 25px;" src="<?=base_url('assets/img/logo-dishub.jpeg')?>" alt="">
                                         <img width="75px" style="margin-bottom: 25px;" src="<?=base_url('assets/img/logo-dishub-2.jpeg')?>" alt="">
                                     </div>
