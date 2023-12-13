@@ -705,6 +705,7 @@ if (!function_exists('generateRampcheckId')) {
         if ($result == 0) {
             return date("Ymd") . "00001";
         }
+        $result++;
         return date("Ymd") . sprintf("%05s", $result);
     }
 }
