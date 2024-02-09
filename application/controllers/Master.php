@@ -46,7 +46,10 @@ class Master extends CI_Controller
 	}
 	public function add_bus()
 	{
-		$nomor_plat_kendaraan = $this->input->post('nomor_plat_kendaraan', true);
+		$initial_start=$this->input->post('initial_start');
+		$number=$this->input->post('number');
+		$initial_end=$this->input->post('initial_end');
+		$nomor_plat_kendaraan = $initial_start.$number.$initial_end;
 		$jenis_angkutan = $this->input->post('jenis_angkutan', true);
 		$nama_po = $this->input->post('nama_po', true);
 		$trayek = $this->input->post('trayek', true);

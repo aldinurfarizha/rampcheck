@@ -21,22 +21,35 @@
 
     <?php foreach ($data as $datar) :
         $detail_bus = getDetailBus($datar); ?>
-        <table>
-            <tbody>
-                <tr>
-                    <td colspan="3">
-                        <center>TTA KUNINGAN</center>
-                    </td>
-                </tr>
-                <tr>
-                  
-                    <td>
-                        <center>
-                            <img style="width:100px;" src="<?= base_url(QR_LOAD_PATH) . $detail_bus->id_bus . '.png' ?>" alt="">
-                        </center>
-                    </td>
-                </tr>
-        </table>
+    <table>
+    <tbody>
+        <tr>
+            <td colspan="3">
+                <center>TTA KUNINGAN</center>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="4">
+                <center>
+                    <img style="width:100px;" src="<?= base_url(QR_LOAD_PATH) . $detail_bus->id_bus . '.png' ?>" alt="">
+                </center>
+            </td>
+            <td>
+                <center><?=@$detail_bus->nama_po?></center>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <center><?=@$detail_bus->nomor_plat_kendaraan?></center>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <center><?=@$detail_bus->trayek?></center>
+            </td>
+        </tr>
+    </tbody>
+</table>
     <?php endforeach;
     ?>
 </body>

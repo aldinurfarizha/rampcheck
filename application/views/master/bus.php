@@ -66,7 +66,17 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Nomor Plat Kendaraan</label>
-                                <input id="add_nomor_plat_kendaraan" type="text" maxlength="9" onkeydown="return /[0-9]/[a-z]/i.test(event.key)" class="form-control" style="text-transform:uppercase" name="nomor_plat_kendaraan" placeholder="Misal:E1234YAH">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                    <input type="text" id="add_initial_start" placeholder="E" maxlength="2" style="text-transform:uppercase" onkeydown="return /[a-z]/i.test(event.key)" name="initial_start" class="form-control text-center">
+                                    </div>
+                                    <div class="col-sm-8">
+                                    <input type="text" id="add_number" placeholder="1234" maxlength="4" onkeydown="return /[0-9]/i.test(event.key) || event.key === 'Backspace' || event.key === 'Delete'" name="number" class="form-control text-center">
+                                    </div>
+                                    <div class="col-sm-2">
+                                    <input type="text" id="add_initial_end" placeholder="YAH" maxlength="3" style="text-transform:uppercase" onkeydown="return /[a-z]/i.test(event.key)" name="initial_end" class="form-control text-center">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -191,8 +201,16 @@
     }
 
     function Addvalidation() {
-        if ($("#add_nomor_plat_kendaraan").val() == "") {
-            alertMessage("Nomor Plat Kendaraan tidak boleh kosong");
+        if ($("#add_initial_start").val() == "") {
+            alertMessage("Kolom Ini tidak boleh kosong");
+            return false;
+        }
+        if ($("#add_number").val() == "") {
+            alertMessage("Kolom Ini tidak boleh kosong");
+            return false;
+        }
+        if ($("#add_initial_end").val() == "") {
+            alertMessage("Kolom Ini tidak boleh kosong");
             return false;
         }
         if ($('#add_nama_po').val() == "") {
